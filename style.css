@@ -1,0 +1,185 @@
+@font-face {
+    font-family: "icomoon";
+    src: url(fonts/icomoon.ttf) format(truetype);
+    /* src: url(fonts/icomoon_icons.ttf) format(truetype); */
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* BOX CHECK */
+    --box-check: 3px solid red;
+
+    /* BACKGROUND-COLOR */
+    --body_bg-clr: #fffdfd;
+
+    /* COLOR */
+    --footer-sig_clr: #070707;
+
+    /* FONT-FAM */
+    --footer-sig_font-fam: sans-serif;
+    --primary_font-fam: icomoon, sans-serif;
+
+    /* FONT-SIZE */
+    --icon_font-sz: 1.5rem;
+    --small_font-sz: 1.125rem;
+
+    /* FONT-WT */
+    --input_font-wt: 300;
+
+    /* MARGIN */
+    --table_margin: 2rem;
+
+    /* PADDING */
+    --input_padding-block: 1.5vb;
+    --input_padding-inline: 2vi;
+    --section_padding: 2vi;
+
+    /* WIDTH */
+    --section_width: 60vi;
+}
+
+body {
+    background-color: var(--body_bg-clr);
+    block-size: 100vh;
+    font-family: var(--primary_font-fam);
+    font-size: var(--small_font-sz);
+    inline-size: 100vw;
+    line-height: 1.5;
+    overflow: auto;
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+h2 {
+    font-weight: 500;
+}
+
+/* HERO IMG */
+main figure {
+    block-size: 100vb;
+    inline-size: 40vi;
+    overflow: hidden;
+}
+main img {
+    block-size: 100vb;
+    inline-size: 100%;
+    object-fit: cover;
+}
+
+/* SECTION CONTAINER */
+section {
+    display: flex;
+    flex-direction: column;
+    inline-size: var(--section_width);
+    justify-content: center;
+    padding-inline: var(--section_padding);
+}
+
+table {
+    /* throw into fxn: */
+    inline-size: 70%;
+}
+
+/* COUNTDOWN */
+.countdown {
+    /* throw this into a fxn: */
+    border-spacing: 2vi;
+    line-height: 0.7;
+    padding-block: 1rem;
+}
+.countdown tr:first-child {
+    text-align: left;
+    font-size: 75px;
+}
+
+/* SIGNUP */
+.signup {
+    margin-block-start: var(--table_margin);
+}
+/* change selector when html changed */
+.signup th:first-child {
+    width: 200px;
+    border-radius: 25px 0 0 25px;
+    background-color: #e9e8e9;
+    color: #a3a3a4;
+    width: 500px;
+    text-align: left;
+}
+input {
+    background-color: inherit;
+    border: 0;
+    border-radius: inherit;
+    font-family: inherit;
+    font-size: var(--small_font-sz);
+    font-weight: var(--input_font-wt);
+    padding-block: var(--input_padding-block);
+    padding-inline-start: var(--input_padding-inline);
+    width: 100%;
+}
+/* change selector when html changed */
+.signup th:last-child {
+    border-radius: 0 25px 25px 0;
+    background-color: #72b6e3;
+    width: 50px;
+    color: var(--body_bg-clr);
+}
+button {
+    background-color: inherit;
+    border: none;
+    border-radius: inherit;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 0.75rem;
+}
+.input-instructions {
+    color: #a3a3a4;
+    font-weight: var(--input_font-wt);
+    padding-inline-start: var(--input_padding-inline);
+}
+
+/* FOOTER */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    inline-size: calc(60vi - var(--section_padding));
+    inset-inline-end: 0;
+    inset-block-end: 2vb;
+    justify-content: flex-end;
+    padding-inline-end: var(--section_padding);
+    position: fixed;
+}
+footer p {
+    color: var(--footer-sig_clr);
+    font-family: var(--footer-sig_font-fam);
+    padding-inline-start: var(--section_padding);
+    margin-inline-start: auto;
+}
+/* List */
+footer ul {
+    display: flex;
+    align-items: center;
+}
+footer li {
+    list-style: none;
+    padding-inline-end: 1em;
+}
+footer a {
+    display: flex;
+    text-decoration: none;
+    text-transform: none;
+    color: lightgrey;
+    font-size: var(--icon_font-sz);
+}
